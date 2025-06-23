@@ -4,7 +4,8 @@ server:
 spring:
   application:
     name: parking-service
-    
+
+
   datasource:
     url: jdbc:mysql://localhost:3306/spms?createDatabaseIfNotExist=true
     username: root

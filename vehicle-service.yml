@@ -5,6 +5,7 @@ spring:
   application:
     name: vehicle-service
 
+
   datasource:
     url: jdbc:mysql://localhost:3306/spms
     username: root
