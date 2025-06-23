@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/v1/users/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            
+        - id: vehicle-service
+          uri: lb://vehicle-service
+          predicates:
+            - Path=/api/v1/vehicles/**
+
+        - id: parking-service
+          uri: lb://parking-service
+          predicates:
+            - Path=/api/v1/parkings/**
+        
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/api/v1/payments/**
+
+        - id: reservation-service
+          uri: lb://reservation-service
+          predicates:
+            - Path=/api/v1/reservations/**
+
+jwt:
+  secret: F49B1D2FEEED30BCA615C98A8E318BFE92A21D2BF9B8FFDED6DD718B62A4219EF1A21631BDC3B5CB7D13A3B3E5D75448AEE8FE779286707612ABE2E7AD57E3DB
+app:
+  base-url: http://localhost:8080   # ✅ added
