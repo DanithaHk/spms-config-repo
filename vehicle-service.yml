@@ -6,9 +6,9 @@ spring:
     name: vehicle-service
 
   datasource:
-    url: jdbc:mysql://localhost:3306/spmsdb
+    url: jdbc:mysql://localhost:3306/spms
     username: root
-    password: 1234
+    password: Ijse@123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

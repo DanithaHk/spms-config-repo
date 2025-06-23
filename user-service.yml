@@ -6,9 +6,9 @@ spring:
     name: user-service
 
   datasource:
-    url: jdbc:mysql://localhost:3306/spmsdb?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/spms?createDatabaseIfNotExist=true
     username: root
-    password: 1234
+    password: Ijse@123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
